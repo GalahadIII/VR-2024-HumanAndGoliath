@@ -1,15 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement_Base : MonoBehaviour
 {
 
-
-    private void Update(){
+    private void FixedUpdate(){
         Logic_MoveXZ();
     }
+
+// ================================================================================================ MoveXZ
 
     [Header("Speed")]
     [SerializeField]
@@ -23,7 +22,9 @@ public class PlayerMovement_Base : MonoBehaviour
     }
 
     private void Logic_MoveXZ(){
-        transform.Translate(Quaternion.Euler(90, 0, 0) * input_MoveXZ * speed_MoveXZ * Time.deltaTime);
+        transform.Translate(Quaternion.Euler(90, 0, 0) * input_MoveXZ * speed_MoveXZ * Time.fixedDeltaTime);
     }
+
+// ================================================================================================
 
 }
