@@ -7,9 +7,9 @@ using UnityEngine.XR.Interaction.Toolkit.Inputs;
 
 public class VRMovement : MonoBehaviour
 {
-    List<InputActionAsset> actionAssets;
+    Vector2 rHandLastPos = Vector2.zero;
 
-    [SerializeField] private InputActionManager vr_input;
+    [SerializeField] private InputActionReference rHandTrigger;
     void Start()
     {
 
@@ -18,15 +18,15 @@ public class VRMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InputActionAsset actionAsset = vr_input.actionAssets[0];
-        InputActionMap actionMap = actionAsset.FindActionMap("XRI RightHand Interaction");
-        InputAction action = actionMap.FindAction("Activate");
+        float rHandTriggerOn = rHandTrigger.action.ReadValue<float>();
 
-        bool rHandTrigger = action.ReadValue<bool>();
-
-        if (rHandTrigger)
+        if (rHandTriggerOn > 0.5)
+        {
             Debug.Log("Right hand trigger PRESSED");
+        }
         else
+        {
             Debug.Log("Right hand trigger UNPRESSED");
+        }
     }
 }
