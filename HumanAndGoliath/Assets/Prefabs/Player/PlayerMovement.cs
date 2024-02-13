@@ -4,6 +4,10 @@ using UnityEngine.InputSystem;
 public class PlayerMovement_Base : MonoBehaviour
 {
 
+    private void Start() {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     private void Update(){
         Logic_MoveXZ();
     }
@@ -21,7 +25,7 @@ public class PlayerMovement_Base : MonoBehaviour
         // Debug.Log($"OnMoveXZ {input}");
     }
 
-    private void Logic_MoveXZ(){
+    private void Logic_MoveXZ() {
         transform.Translate(Quaternion.Euler(90, cameraPivotTransform.localRotation.eulerAngles.y, 0) * input_MoveXZ * speedMoveXZ * Time.deltaTime);
     }
 
@@ -50,7 +54,8 @@ public class PlayerMovement_Base : MonoBehaviour
 
         Vector3 rotationFinal = rotationCamLocalEuler + rotationDelta;
 
-        // Debug.Log($"{mouseDelta} {mouseDeltaScaled} {rotationLocalEuler} {rotationDelta} {rotFinal} {Quaternion.Euler(new Vector3(0, rotFinal.y, 0))*Vector3.forward}");
+        // Debug.Log($"{mouseDelta} {mouseDeltaScaled} {rotationCamLocalEuler} {rotationDelta} {rotationFinal} {Quaternion.Euler(new Vector3(0, rotationFinal.y, 0))*Vector3.forward}");
+        Debug.Log($"{rotationFinal.x}");
 
         // lock when looking under
         if (rotationFinal.x >  90f && rotationFinal.x < 180f) {
@@ -77,19 +82,29 @@ public class PlayerMovement_Base : MonoBehaviour
     [SerializeField]
     private bool cameraLocked = true;
 
-    public void OnCameraLock(InputValue input){
+    public void OnCameraLock(InputValue input) {
         float pressValue = input.Get<float>();
         bool isPressed = pressValue != 0f;
 
         if (cameraLockMode == CameraLockMode.Toggle) {
             if (isPressed) {
-                cameraLocked = !cameraLocked;
+                SetCameraLock(!cameraLocked);
             }
         } else if (cameraLockMode == CameraLockMode.Hold) {
-            cameraLocked = isPressed;
+            SetCameraLock(isPressed);
         }
 
-        Debug.Log(pressValue);
+    }
+
+    public void SetCameraLock(bool newCameraLocked) {
+
+        cameraLocked = newCameraLocked;
+        if (cameraLocked) {
+            Cursor.lockState = CursorLockMode.None;
+        } else {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
+
     }
 
 // ================================================================================================ camera rotate
