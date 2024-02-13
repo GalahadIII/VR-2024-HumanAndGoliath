@@ -4,16 +4,16 @@ using UnityEngine.InputSystem;
 public class InputManager_XRI : MonoBehaviour
 {
 
-    public void OnDeviceLost(InputAction input){
-        Debug.Log($"OnDeviceLost ${input}");
+    public void OnDeviceLost(){
+        Debug.Log($"OnDeviceLost");
     }
 
-    public void OnDeviceRegained(InputAction input){
-        Debug.Log($"OnDeviceRegained ${input}");
+    public void OnDeviceRegained(){
+        Debug.Log($"OnDeviceRegained");
     }
 
-    public void OnControlsChanged(InputAction input){
-        Debug.Log($"OnControlsChanged ${input}");
+    public void OnControlsChanged(){
+        Debug.Log($"OnControlsChanged");
     }
 
     public void OnPosition(InputAction input){
