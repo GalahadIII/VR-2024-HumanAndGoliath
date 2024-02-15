@@ -23265,6 +23265,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 913542604920612574, guid: d0e2ef603d7efb4c18d904098140cbda, type: 3}
+      propertyPath: m_NeverAutoSwitchControlSchemes
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1023075119499949940, guid: d0e2ef603d7efb4c18d904098140cbda, type: 3}
       propertyPath: m_Name
       value: Player VR
