@@ -2223,6 +2223,21 @@
                     "devicePath": "<WMRHMD>",
                     "isOptional": true,
                     "isOR": false
+                },
+                {
+                    "devicePath": "<EyeGaze>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRHMD>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<HandInteractionPoses>",
+                    "isOptional": false,
+                    "isOR": false
                 }
             ]
         },

@@ -1,0 +1,311 @@
+{
+    "name": "XRI InputAction",
+    "maps": [
+        {
+            "name": "OpenXR Inputs",
+            "id": "c5d62f84-2343-470a-a310-2d99cabb1ca6",
+            "actions": [
+                {
+                    "name": "CenterEyeAngularVelocity",
+                    "type": "Button",
+                    "id": "eb3c46cf-e54d-44d5-857a-840c224fdab9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CenterEyePosition",
+                    "type": "Button",
+                    "id": "c364ca6e-0a18-4035-9250-6eab3afe75d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CenterEyeRotation",
+                    "type": "Button",
+                    "id": "8582f735-0833-4229-9021-759762aa4011",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "CenterEyeVelocity",
+                    "type": "Button",
+                    "id": "9a52efa7-4735-434a-9b7e-2ed3182fdc18",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DeviceAngularVelocitu",
+                    "type": "Button",
+                    "id": "caddd906-5123-4a51-aabd-2dee1e238f32",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DevicePosition",
+                    "type": "Value",
+                    "id": "99e3fc4a-064d-4a86-8d9e-46de267ac6ef",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DeviceRotation",
+                    "type": "Value",
+                    "id": "12e1ef84-e967-4af5-8c01-f64d56c5cd9f",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DeviceVelocity",
+                    "type": "Button",
+                    "id": "d137dabb-c760-4000-a162-7d523b86fba8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "IsTracked",
+                    "type": "Button",
+                    "id": "660a2eca-1463-4344-a69a-88cd92c00f55",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftEyeAngularVelocity",
+                    "type": "Button",
+                    "id": "0675bbeb-92f4-41d6-adfd-b9f92164d81a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftEyePosition",
+                    "type": "Button",
+                    "id": "8597f1fa-0e3f-48b5-a732-271d8515a178",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftEyeRotation",
+                    "type": "Button",
+                    "id": "e735a9b8-7718-4ac9-ac3f-d1f27e1ce072",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftEyeVelocity",
+                    "type": "Button",
+                    "id": "97426485-f1ac-4f77-925a-caea6e9db3c0",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftEyeAngularVelocity1",
+                    "type": "Button",
+                    "id": "9a07fd78-50a4-4b3a-8b45-65da3fcde622",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "0e2040a9-04a2-4444-bc68-de8377870456",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "CenterEyeAngularVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80f9b99e-8e89-43af-b9e2-26133d6748a8",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "CenterEyePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4d2333b0-ef4b-4815-84b8-221f3629d601",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "CenterEyeRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4a91eb4-b52b-4446-ab23-3fb789cbd9b1",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "CenterEyeVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6049879b-eeb4-49a7-ba0e-a5e310482683",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "DeviceAngularVelocitu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9dd5ef77-e2a5-4224-8ab1-262a0d46b969",
+                    "path": "<XRHMD>/{DevicePosition}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "DevicePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f35b8228-0244-4829-bc74-aeeccf9ce278",
+                    "path": "<XRHMD>/{DeviceRotation}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "DeviceRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "536312b0-dfb2-4e54-b1e2-911c276d058f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "DeviceVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eaabaadf-d201-4b0e-b515-5f3c077acf46",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "IsTracked",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "877d2d32-f951-42c7-aa0d-a40d9f2f2d0d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "LeftEyeAngularVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2c64f26d-39be-450c-9c41-c2e4c124b908",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "LeftEyePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a29845a7-20be-4c36-9fbc-7159f9737024",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "LeftEyeRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aeebcae1-826e-4629-aca7-b296520d3bf0",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "LeftEyeVelocity",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5c9425ef-3321-42da-927b-90e2a1430867",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "OpenXR VR",
+                    "action": "LeftEyeAngularVelocity1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "OpenXR VR",
+            "bindingGroup": "OpenXR VR",
+            "devices": [
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRHMD>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
