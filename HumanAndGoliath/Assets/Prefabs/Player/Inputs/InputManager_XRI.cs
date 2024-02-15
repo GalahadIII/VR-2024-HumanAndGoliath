@@ -21,35 +21,35 @@ public class InputManager_XRI : InputManager_Base
 
     public Vector3 HeadPosition { get; private set; }
 
-    public void OnHeadPosition(InputAction input){
+    public void OnHeadPosition(InputValue input){
         Debug.Log($"OnHeadPosition ${input}");
     }
 
-    public void OnHeadRotation(InputAction input){
+    public void OnHeadRotation(InputValue input){
         Debug.Log($"OnHeadRotation ${input}");
     }
 
-    public void OnHeadIsTracked(InputAction input){
+    public void OnHeadIsTracked(InputValue input){
         Debug.Log($"OnHeadIsTracked ${input}");
     }
 
-    public void OnHeadTrackingState(InputAction input){
+    public void OnHeadTrackingState(InputValue input){
         Debug.Log($"OnHeadTrackingState ${input}");
     }
 
-    public void OnEyeGazePosition(InputAction input){
+    public void OnEyeGazePosition(InputValue input){
         Debug.Log($"OnEyeGazePosition ${input}");
     }
 
-    public void OnEyeGazeRotation(InputAction input){
+    public void OnEyeGazeRotation(InputValue input){
         Debug.Log($"OnEyeGazeRotation ${input}");
     }
 
-    public void OnEyeGazeIsTracked(InputAction input){
+    public void OnEyeGazeIsTracked(InputValue input){
         Debug.Log($"OnEyeGazeIsTracked ${input}");
     }
 
-    public void OnEyeGazeTrackingState(InputAction input){
+    public void OnEyeGazeTrackingState(InputValue input){
         Debug.Log($"OnEyeGazeTrackingState ${input}");
     }
 
@@ -58,47 +58,47 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= Left Hand
 
-    public void OnLeftHandPosition(InputAction input){
+    public void OnLeftHandPosition(InputValue input){
         Debug.Log($"OnLeftHandPosition ${input}");
     }
 
-    public void OnLeftHandRotation(InputAction input){
+    public void OnLeftHandRotation(InputValue input){
         Debug.Log($"OnLeftHandRotation ${input}");
     }
 
-    public void OnLeftHandIsTracked(InputAction input){
+    public void OnLeftHandIsTracked(InputValue input){
         Debug.Log($"OnLeftHandIsTracked ${input}");
     }
 
-    public void OnLeftHandTrackingState(InputAction input){
+    public void OnLeftHandTrackingState(InputValue input){
         Debug.Log($"OnLeftHandTrackingState ${input}");
     }
 
-    public void OnLeftHandHapticDevice(InputAction input){
+    public void OnLeftHandHapticDevice(InputValue input){
         Debug.Log($"OnLeftHandHapticDevice ${input}");
     }
 
-    public void OnLeftHandAimPosition(InputAction input){
+    public void OnLeftHandAimPosition(InputValue input){
         Debug.Log($"OnLeftHandAimPosition ${input}");
     }
 
-    public void OnLeftHandAimRotation(InputAction input){
+    public void OnLeftHandAimRotation(InputValue input){
         Debug.Log($"OnLeftHandAimRotation ${input}");
     }
 
-    public void OnLeftHandAimFlags(InputAction input){
+    public void OnLeftHandAimFlags(InputValue input){
         Debug.Log($"OnLeftHandAimFlags ${input}");
     }
 
-    public void OnLeftHandPinchPosition(InputAction input){
+    public void OnLeftHandPinchPosition(InputValue input){
         Debug.Log($"OnLeftHandPinchPosition ${input}");
     }
 
-    public void OnLeftHandPokePosition(InputAction input){
+    public void OnLeftHandPokePosition(InputValue input){
         Debug.Log($"OnLeftHandPokePosition ${input}");
     }
 
-    public void OnLeftHandPokeRotation(InputAction input){
+    public void OnLeftHandPokeRotation(InputValue input){
         Debug.Log($"OnLeftHandPokeRotation ${input}");
     }
 
@@ -106,39 +106,39 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= Left Hand Interaction
 
-    public void OnLeftHandSelect(InputAction input){
+    public void OnLeftHandSelect(InputValue input){
         Debug.Log($"OnLeftHandSelect ${input}");
     }
 
-    public void OnLeftHandSelectValue(InputAction input){
+    public void OnLeftHandSelectValue(InputValue input){
         Debug.Log($"OnLeftHandSelectValue ${input}");
     }
 
-    public void OnLeftHandActivate(InputAction input){
+    public void OnLeftHandActivate(InputValue input){
         Debug.Log($"OnLeftHandActivate ${input}");
     }
 
-    public void OnLeftHandActivateValue(InputAction input){
+    public void OnLeftHandActivateValue(InputValue input){
         Debug.Log($"OnLeftHandActivateValue ${input}");
     }
 
-    public void OnLeftHandUIPress(InputAction input){
+    public void OnLeftHandUIPress(InputValue input){
         Debug.Log($"OnLeftHandUIPress ${input}");
     }
 
-    public void OnLeftHandUIPressValue(InputAction input){
+    public void OnLeftHandUIPressValue(InputValue input){
         Debug.Log($"OnLeftHandUIPressValue ${input}");
     }
 
-    public void OnLeftHandUIScroll(InputAction input){
+    public void OnLeftHandUIScroll(InputValue input){
         Debug.Log($"OnLeftHandUIScroll ${input}");
     }
 
-    public void OnLeftHandRotateAnchor(InputAction input){
+    public void OnLeftHandRotateAnchor(InputValue input){
         Debug.Log($"OnLeftHandRotateAnchor ${input}");
     }
 
-    public void OnLeftHandTranslateAnchor(InputAction input){
+    public void OnLeftHandTranslateAnchor(InputValue input){
         Debug.Log($"OnLeftHandTranslateAnchor ${input}");
     }
 
@@ -146,35 +146,35 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= Left Hand Locomotion
 
-    public void OnLeftHandTeleportSelect(InputAction input){
+    public void OnLeftHandTeleportSelect(InputValue input){
         Debug.Log($"OnLeftHandTeleportSelect ${input}");
     }
 
-    public void OnLeftHandTeleportModeActivate(InputAction input){
+    public void OnLeftHandTeleportModeActivate(InputValue input){
         Debug.Log($"OnLeftHandTeleportModeActivate ${input}");
     }
 
-    public void OnLeftHandTeleportModeCancel(InputAction input){
+    public void OnLeftHandTeleportModeCancel(InputValue input){
         Debug.Log($"OnLeftHandTeleportModeCancel ${input}");
     }
 
-    public void OnLeftHandTeleportDirection(InputAction input){
+    public void OnLeftHandTeleportDirection(InputValue input){
         Debug.Log($"OnLeftHandTeleportDirection ${input}");
     }
 
-    public void OnLeftHandTurn(InputAction input){
+    public void OnLeftHandTurn(InputValue input){
         Debug.Log($"OnLeftHandTurn ${input}");
     }
 
-    public void OnLeftHandMove(InputAction input){
+    public void OnLeftHandMove(InputValue input){
         Debug.Log($"OnLeftHandMove ${input}");
     }
 
-    public void OnLeftHandGrabMove(InputAction input){
+    public void OnLeftHandGrabMove(InputValue input){
         Debug.Log($"OnLeftHandGrabMove ${input}");
     }
 
-    public void OnLeftHandSnapTurn(InputAction input){
+    public void OnLeftHandSnapTurn(InputValue input){
         Debug.Log($"OnLeftHandSnapTurn ${input}");
     }
 
@@ -183,47 +183,47 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= Right Hand
 
-    public void OnRightHandPosition(InputAction input){
+    public void OnRightHandPosition(InputValue input){
         Debug.Log($"OnRightHandPosition ${input}");
     }
 
-    public void OnRightHandRotation(InputAction input){
+    public void OnRightHandRotation(InputValue input){
         Debug.Log($"OnRightHandRotation ${input}");
     }
 
-    public void OnRightHandIsTracked(InputAction input){
+    public void OnRightHandIsTracked(InputValue input){
         Debug.Log($"OnRightHandIsTracked ${input}");
     }
 
-    public void OnRightHandTrackingState(InputAction input){
+    public void OnRightHandTrackingState(InputValue input){
         Debug.Log($"OnRightHandTrackingState ${input}");
     }
 
-    public void OnRightHandHapticDevice(InputAction input){
+    public void OnRightHandHapticDevice(InputValue input){
         Debug.Log($"OnRightHandHapticDevice ${input}");
     }
 
-    public void OnRightHandAimPosition(InputAction input){
+    public void OnRightHandAimPosition(InputValue input){
         Debug.Log($"OnRightHandAimPosition ${input}");
     }
 
-    public void OnRightHandAimRotation(InputAction input){
+    public void OnRightHandAimRotation(InputValue input){
         Debug.Log($"OnRightHandAimRotation ${input}");
     }
 
-    public void OnRightHandAimFlags(InputAction input){
+    public void OnRightHandAimFlags(InputValue input){
         Debug.Log($"OnRightHandAimFlags ${input}");
     }
 
-    public void OnRightHandPinchPosition(InputAction input){
+    public void OnRightHandPinchPosition(InputValue input){
         Debug.Log($"OnRightHandPinchPosition ${input}");
     }
 
-    public void OnRightHandPokePosition(InputAction input){
+    public void OnRightHandPokePosition(InputValue input){
         Debug.Log($"OnRightHandPokePosition ${input}");
     }
 
-    public void OnRightHandPokeRotation(InputAction input){
+    public void OnRightHandPokeRotation(InputValue input){
         Debug.Log($"OnRightHandPokeRotation ${input}");
     }
 
@@ -231,39 +231,39 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= Right Hand Interaction
 
-    public void OnRightHandSelect(InputAction input){
+    public void OnRightHandSelect(InputValue input){
         Debug.Log($"OnRightHandSelect ${input}");
     }
 
-    public void OnRightHandSelectValue(InputAction input){
+    public void OnRightHandSelectValue(InputValue input){
         Debug.Log($"OnRightHandSelectValue ${input}");
     }
 
-    public void OnRightHandActivate(InputAction input){
+    public void OnRightHandActivate(InputValue input){
         Debug.Log($"OnRightHandActivate ${input}");
     }
 
-    public void OnRightHandActivateValue(InputAction input){
+    public void OnRightHandActivateValue(InputValue input){
         Debug.Log($"OnRightHandActivateValue ${input}");
     }
 
-    public void OnRightHandUIPress(InputAction input){
+    public void OnRightHandUIPress(InputValue input){
         Debug.Log($"OnRightHandUIPress ${input}");
     }
 
-    public void OnRightHandUIPressValue(InputAction input){
+    public void OnRightHandUIPressValue(InputValue input){
         Debug.Log($"OnRightHandUIPressValue ${input}");
     }
 
-    public void OnRightHandUIScroll(InputAction input){
+    public void OnRightHandUIScroll(InputValue input){
         Debug.Log($"OnRightHandUIScroll ${input}");
     }
 
-    public void OnRightHandRotateAnchor(InputAction input){
+    public void OnRightHandRotateAnchor(InputValue input){
         Debug.Log($"OnRightHandRotateAnchor ${input}");
     }
 
-    public void OnRightHandTranslateAnchor(InputAction input){
+    public void OnRightHandTranslateAnchor(InputValue input){
         Debug.Log($"OnRightHandTranslateAnchor ${input}");
     }
 
@@ -271,35 +271,35 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= Right Hand Locomotion
 
-    public void OnRightHandTeleportSelect(InputAction input){
+    public void OnRightHandTeleportSelect(InputValue input){
         Debug.Log($"OnRightHandTeleportSelect ${input}");
     }
 
-    public void OnRightHandTeleportModeActivate(InputAction input){
+    public void OnRightHandTeleportModeActivate(InputValue input){
         Debug.Log($"OnRightHandTeleportModeActivate ${input}");
     }
 
-    public void OnRightHandTeleportModeCancel(InputAction input){
+    public void OnRightHandTeleportModeCancel(InputValue input){
         Debug.Log($"OnRightHandTeleportModeCancel ${input}");
     }
 
-    public void OnRightHandTeleportDirection(InputAction input){
+    public void OnRightHandTeleportDirection(InputValue input){
         Debug.Log($"OnRightHandTeleportDirection ${input}");
     }
 
-    public void OnRightHandTurn(InputAction input){
+    public void OnRightHandTurn(InputValue input){
         Debug.Log($"OnRightHandTurn ${input}");
     }
 
-    public void OnRightHandMove(InputAction input){
+    public void OnRightHandMove(InputValue input){
         Debug.Log($"OnRightHandMove ${input}");
     }
 
-    public void OnRightHandGrabMove(InputAction input){
+    public void OnRightHandGrabMove(InputValue input){
         Debug.Log($"OnRightHandGrabMove ${input}");
     }
 
-    public void OnRightHandSnapTurn(InputAction input){
+    public void OnRightHandSnapTurn(InputValue input){
         Debug.Log($"OnRightHandSnapTurn ${input}");
     }
 
@@ -308,35 +308,35 @@ public class InputManager_XRI : InputManager_Base
 
     #region ======================================================================================= UI
 
-    public void OnNavigate(InputAction input){
+    public void OnNavigate(InputValue input){
         Debug.Log($"OnNavigate ${input}");
     }
 
-    public void OnSubmit(InputAction input){
+    public void OnSubmit(InputValue input){
         Debug.Log($"OnSubmit ${input}");
     }
 
-    public void OnCancel(InputAction input){
+    public void OnCancel(InputValue input){
         Debug.Log($"OnCancel ${input}");
     }
 
-    public void OnPoint(InputAction input){
+    public void OnPoint(InputValue input){
         Debug.Log($"OnPoint ${input}");
     }
 
-    public void OnClick(InputAction input){
+    public void OnClick(InputValue input){
         Debug.Log($"OnClick ${input}");
     }
 
-    public void OnScrollWheel(InputAction input){
+    public void OnScrollWheel(InputValue input){
         Debug.Log($"OnScrollWheel ${input}");
     }
 
-    public void OnMiddleClick(InputAction input){
+    public void OnMiddleClick(InputValue input){
         Debug.Log($"OnMiddleClick ${input}");
     }
 
-    public void OnRightClick(InputAction input){
+    public void OnRightClick(InputValue input){
         Debug.Log($"OnRightClick ${input}");
     }
 
