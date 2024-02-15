@@ -58,11 +58,11 @@ public class PlayerMovement_Base : MonoBehaviour
         Debug.Log($"{rotationFinal.x}");
 
         // lock when looking under
-        if (rotationFinal.x >  90f && rotationFinal.x < 180f) {
+        if (rotationFinal.x >  90f && rotationFinal.x <= 180f) {
             rotationFinal.x =  90f;
         }
         // lock when looking above
-        if (rotationFinal.x < 270f && rotationFinal.x > 180f) {
+        if (rotationFinal.x < 270f && rotationFinal.x >  180f) {
             rotationFinal.x = 270f;
         }
 

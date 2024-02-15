@@ -16,6 +16,21 @@ using UnityEngine.UI;
 
 public class FirstPersonController : MonoBehaviour
 {
+
+    private float input_MouseX = 0;
+    private float input_MouseY = 0;
+
+    private bool input_OnDown_Zoom = false;
+    private bool input_OnUp_Zoom = false;
+
+    private bool input_OnDown_Jump = false;
+
+    private bool input_OnDown_Crouch = false;
+    private bool input_OnUp_Crouch = false;
+
+    private float input_Horizontal = 0;
+    private float input_Vertical = 0;
+
     private Rigidbody rb;
 
     #region Camera Movement Variables
@@ -199,20 +214,6 @@ public class FirstPersonController : MonoBehaviour
     }
 
     float camRotation;
-
-    float input_MouseX = 0;
-    float input_MouseY = 0;
-
-    bool input_OnDown_Zoom = false;
-    bool input_OnUp_Zoom = false;
-
-    bool input_OnDown_Jump = false;
-
-    bool input_OnDown_Crouch = false;
-    bool input_OnUp_Crouch = false;
-
-    float input_Horizontal = 0;
-    float input_Vertical = 0;
 
     bool input_IsDown_Sprint = false;
 
