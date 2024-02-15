@@ -1,5 +1,5 @@
 {
-    "name": "Test1_InputActions",
+    "name": "PlayerInputAction",
     "maps": [
         {
             "name": "Keyboard",
@@ -126,7 +126,7 @@
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard+Mouse",
                     "action": "CameraLock",
                     "isComposite": false,
                     "isPartOfComposite": false
