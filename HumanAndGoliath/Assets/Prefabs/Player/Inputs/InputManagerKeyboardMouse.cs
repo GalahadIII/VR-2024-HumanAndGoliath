@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class InputManager_KeyboardMouse : InputManager_Base
+public class InputManagerKeyboardMouse : InputManagerBase
 {
 
     public void OnMoveXZ(InputValue input) {

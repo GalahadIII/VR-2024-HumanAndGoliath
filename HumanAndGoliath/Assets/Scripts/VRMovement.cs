@@ -15,7 +15,6 @@ public class VRMovement : MonoBehaviour
 
     }
 
-    // Update is called once per frame
     void Update()
     {
         float rHandTriggerOn = rHandTrigger.action.ReadValue<float>();

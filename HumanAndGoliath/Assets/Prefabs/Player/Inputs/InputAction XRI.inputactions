@@ -1,5 +1,5 @@
 {
-    "name": "XRI_InputActions",
+    "name": "InputAction XRI",
     "maps": [
         {
             "name": "XRI Head",
@@ -80,26 +80,92 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "cff1f981-6e1f-4e2c-a90c-715a0ea2e80e",
+                    "name": "Vector 3 Fallback",
+                    "id": "4fbdea28-06c7-4cec-bf53-b9c0ed554707",
+                    "path": "Vector3Fallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Position",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "first",
+                    "id": "046de67e-ad10-4524-8a83-e86de0481fe0",
                     "path": "<XRHMD>/centerEyePosition",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Head Position",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "454eb7d2-a7f1-40ec-a3a8-c3bd5742e98c",
+                    "path": "<XRHMD>/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Head Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "5ea57abb-1467-47cf-b237-40f5c984eb96",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Head Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Quaternion Fallback",
+                    "id": "98110f28-270c-4f57-8d57-57df3723f5a2",
+                    "path": "QuaternionFallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Rotation",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "e2017383-a3f6-4c46-acb1-012b8eece9cc",
+                    "name": "first",
+                    "id": "c23b49f7-7030-4abb-9b8f-2aa5e898ed3c",
                     "path": "<XRHMD>/centerEyeRotation",
                     "interactions": "",
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Head Rotation",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "34ea4669-ab95-49a6-b7e2-12abee19fa01",
+                    "path": "<XRHMD>/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Head Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "c485c180-810a-4410-aa34-4dd80c691501",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Generic XR Controller",
+                    "action": "Head Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "Quaternion Fallback",
@@ -2216,11 +2282,6 @@
                 },
                 {
                     "devicePath": "<XRController>",
-                    "isOptional": true,
-                    "isOR": false
-                },
-                {
-                    "devicePath": "<WMRHMD>",
                     "isOptional": true,
                     "isOR": false
                 },

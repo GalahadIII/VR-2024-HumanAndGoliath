@@ -1,0 +1,749 @@
+{
+    "name": "InputAction XRI",
+    "maps": [
+        {
+            "name": "VR OpenXR Raw",
+            "id": "c5d62f84-2343-470a-a310-2d99cabb1ca6",
+            "actions": [
+                {
+                    "name": "CenterEyePosition",
+                    "type": "Value",
+                    "id": "c364ca6e-0a18-4035-9250-6eab3afe75d5",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "CenterEyeRotation",
+                    "type": "Value",
+                    "id": "8582f735-0833-4229-9021-759762aa4011",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftEyeRotation",
+                    "type": "Value",
+                    "id": "20d68312-6961-45eb-95a3-976540a73fe3",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftEyePosition",
+                    "type": "Value",
+                    "id": "9252f15f-925a-4eb3-8365-048febf4a2d2",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RightEyeRotation",
+                    "type": "Value",
+                    "id": "7ff37e4c-5b7c-4dfc-84c7-1b294c1981b2",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "RightEyePosition",
+                    "type": "Value",
+                    "id": "0d1e97f2-f720-4d9a-a6ad-cbc76b7a2239",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DevicePosition",
+                    "type": "Value",
+                    "id": "99e3fc4a-064d-4a86-8d9e-46de267ac6ef",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "DeviceRotation",
+                    "type": "Value",
+                    "id": "12e1ef84-e967-4af5-8c01-f64d56c5cd9f",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftHand IsTracked",
+                    "type": "Button",
+                    "id": "75b20f76-0be1-46d7-bc60-f5b0e195c98c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHand DevicePosition",
+                    "type": "Value",
+                    "id": "c6dff560-3f7f-4c57-a438-30a828bf62c9",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftHand DeviceRotation",
+                    "type": "Value",
+                    "id": "7e50e353-32d6-457a-930d-1c1b0779decd",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftHand Pose Device",
+                    "type": "Value",
+                    "id": "d05b4999-347b-4d0c-b48c-04fff95b0b4f",
+                    "expectedControlType": "Pose",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "LeftHand Pose Pointer",
+                    "type": "Value",
+                    "id": "6925b441-1281-4615-9fdf-5b3bb6ce6ea0",
+                    "expectedControlType": "Pose",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "80f9b99e-8e89-43af-b9e2-26133d6748a8",
+                    "path": "<XRHMD>/centerEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "CenterEyePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9dd5ef77-e2a5-4224-8ab1-262a0d46b969",
+                    "path": "<XRHMD>/{DevicePosition}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "DevicePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f35b8228-0244-4829-bc74-aeeccf9ce278",
+                    "path": "<XRHMD>/{DeviceRotation}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "DeviceRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "104cc256-63c6-4c2e-9a65-fcede3a2d3fe",
+                    "path": "<XRController>{LeftHand}/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand IsTracked",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ce9705f9-e979-4528-8add-b87abb5d1529",
+                    "path": "<XRController>{LeftHand}/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand DevicePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2e44049b-3c18-4db7-b600-3e81d10637d6",
+                    "path": "<XRHMD>/leftEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftEyePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c66e5f4f-6f49-4afd-ba70-d0f808f39ffb",
+                    "path": "<XRHMD>/rightEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "RightEyePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ab98921-3b16-4972-b376-47cc0a5cad3c",
+                    "path": "<XRHMD>/leftEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftEyeRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3d12002d-ed4b-45a6-889b-6d6dc923b737",
+                    "path": "<XRHMD>/rightEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "RightEyeRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4d2333b0-ef4b-4815-84b8-221f3629d601",
+                    "path": "<XRHMD>/centerEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "CenterEyeRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c0022176-4610-4cc2-82ae-70b6212cc2a0",
+                    "path": "<XRController>{LeftHand}/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand DeviceRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2fe70ed0-8059-4b79-a92a-7da66ab9a26b",
+                    "path": "<XRController>{LeftHand}/{Device}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHand Pose Device",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72264821-308d-458b-8dd7-5bfbf3653ed6",
+                    "path": "<XRController>{LeftHand}/{Pointer}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftHand Pose Pointer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Head",
+            "id": "35f07b82-bd19-4b1d-bcc3-d243eee73d49",
+            "actions": [
+                {
+                    "name": "Head Eye Gaze Tracking State",
+                    "type": "Value",
+                    "id": "d68c5f32-32d6-48ad-a4b3-d87d8a7fbab3",
+                    "expectedControlType": "Integer",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Eye Gaze Is Tracked",
+                    "type": "Button",
+                    "id": "167e4def-ee54-4f86-8d9f-dec8bea4ab1c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Eye Gaze Rotation",
+                    "type": "Value",
+                    "id": "56afa58a-347f-403d-962e-415a1390d1c6",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Eye Gaze Position",
+                    "type": "Value",
+                    "id": "d204974a-dff8-45a7-8b22-88cd6dd12277",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Tracking State",
+                    "type": "Value",
+                    "id": "62082ce3-7767-46bd-b1b2-542d51e6f114",
+                    "expectedControlType": "Integer",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Is Tracked",
+                    "type": "Button",
+                    "id": "d5471c04-e125-423f-8d20-e9493baf2b43",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Rotation",
+                    "type": "Value",
+                    "id": "429fff39-ec32-417d-9d66-68c6acf9445c",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head Position",
+                    "type": "Value",
+                    "id": "292551e2-6c22-493a-b98a-2521591aece9",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Head UserPresence",
+                    "type": "Button",
+                    "id": "cacd39dd-50ab-4b5d-924d-401e44387890",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c25d321f-2301-4b81-bf8c-afd9647b7bbb",
+                    "path": "<XRHMD>/centerEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "00ce0e44-ded7-4f7f-8fdf-026ac3283843",
+                    "path": "<XRHMD>/centerEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3058581c-36fa-48c8-8a5b-f2ec8d52789a",
+                    "path": "<XRHMD>/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Is Tracked",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ccb33c7d-04c9-4291-9c3e-7d758a3c518d",
+                    "path": "<XRHMD>/trackingState",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Tracking State",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Vector 3 Fallback",
+                    "id": "b8f2bc05-acae-4cc8-ad92-408c9c97b305",
+                    "path": "Vector3Fallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Position",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "first",
+                    "id": "24ea1a0e-1f08-4ab3-b03b-36201a3e2a29",
+                    "path": "<EyeGaze>/pose/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "b10dbc16-161b-40dd-8bd0-5997735ea14e",
+                    "path": "<XRHMD>/centerEyePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "c907ae75-a056-483c-834c-c180d85f4672",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Position",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Quaternion Fallback",
+                    "id": "2ee535c0-bfce-49a5-8370-ac7981e8821a",
+                    "path": "QuaternionFallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Rotation",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "first",
+                    "id": "38cdf774-99e7-4296-9dc4-ec68890af5b7",
+                    "path": "<EyeGaze>/pose/rotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "b0976285-31ea-4c77-ad22-6f5ed9210ddb",
+                    "path": "<XRHMD>/centerEyeRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "0d420f27-0a15-464f-aa8e-aaacb6521a81",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Button Fallback",
+                    "id": "6e6bc162-9d7f-484e-8e92-c1d2e3f3943d",
+                    "path": "ButtonFallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Is Tracked",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "first",
+                    "id": "a891e862-de18-41ff-abf8-338d90058378",
+                    "path": "<EyeGaze>/pose/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Is Tracked",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "a931a671-1d84-48e2-9bd2-bad7eebb174f",
+                    "path": "<XRHMD>/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Is Tracked",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "96b66dd9-3739-4333-828e-66cc3dc4ea24",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Is Tracked",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Integer Fallback",
+                    "id": "43272538-7dfb-42db-8a47-29065d45f788",
+                    "path": "IntegerFallback",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Tracking State",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "first",
+                    "id": "5376612e-60cf-4656-aea9-3b36029b2c13",
+                    "path": "<EyeGaze>/pose/trackingState",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Tracking State",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "second",
+                    "id": "e174f459-c8db-4726-bb2c-2cd0be410bfb",
+                    "path": "<XRHMD>/trackingState",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head Eye Gaze Tracking State",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "third",
+                    "id": "05ae2487-76dd-4b11-90f9-8c7e67af5af2",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Head Eye Gaze Tracking State",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "cdec28dd-37fd-4046-832c-57e6a3578b4a",
+                    "path": "<XRHMD>/userPresence",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "Head UserPresence",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Left Hand",
+            "id": "b3454cfa-b9bc-4a64-8517-a7f3dfa16bcc",
+            "actions": [
+                {
+                    "name": "LeftHand DevicePosition",
+                    "type": "PassThrough",
+                    "id": "399cdac7-25f7-489c-8e3e-d4a34740f60c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHand DeviceRotation",
+                    "type": "PassThrough",
+                    "id": "b9aeabd7-308a-4515-a387-4343e203ae76",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHand IsTracked",
+                    "type": "PassThrough",
+                    "id": "01892058-62fe-4a0e-ab26-e935adb9fdaa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHand TrackingState",
+                    "type": "PassThrough",
+                    "id": "cd2a8d90-b872-44d3-985f-ec73381fed38",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHand DevicePose",
+                    "type": "PassThrough",
+                    "id": "4cbf787a-e0d2-4252-9bcc-a456a11f7f59",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "LeftHand DevicePose1",
+                    "type": "PassThrough",
+                    "id": "495b8194-6c26-4380-8c1b-d67a4bf9147e",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9e51abf3-3c84-49be-ab94-c69ba8cd881a",
+                    "path": "<XRController>/devicePosition",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand DevicePosition",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "96cbc504-121e-4550-a0e2-0b518b66ac6d",
+                    "path": "<XRController>/deviceRotation",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand DeviceRotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9694ca88-b1a6-43a5-90c3-706e7f4495ee",
+                    "path": "<XRController>/isTracked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand IsTracked",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a70c297-efed-4c4f-a38e-ca19b6297a33",
+                    "path": "<XRController>/trackingState",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand TrackingState",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cecc055d-8203-4275-9689-97c7e43d8f92",
+                    "path": "<ValveIndexController>/devicePose",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand DevicePose",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aafd063c-4a93-400a-973e-590ed5161998",
+                    "path": "<ValveIndexController>{LeftHand}/grip",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "VR OpenXR Raw",
+                    "action": "LeftHand DevicePose1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "VR OpenXR Raw",
+            "bindingGroup": "VR OpenXR Raw",
+            "devices": [
+                {
+                    "devicePath": "<XRHMD>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{LeftHand}/{Back}",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<XRController>{RightHand}/{Back}",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
