@@ -8,28 +8,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
+
 
 public class FirstPersonController : MonoBehaviour
 {
 
+    private InputActionReference cameraDeltaRef;
+    private Vector2 cameraDeltaBuffer = Vector2.zero;
     private float Input_MouseX {
         get {
-            return Input.GetAxis("Mouse X");
-            // return 0;
+            // return Input.GetAxis("Mouse X");
+            return cameraDeltaBuffer.x;
         }
     }
-
     private float Input_MouseY {
         get {
-            return Input.GetAxis("Mouse Y");
+            // return Input.GetAxis("Mouse Y");
+            return cameraDeltaBuffer.y;
         }
     }
 
+    // private InputActionReference cameraDeltaRef;
+    // private bool cameraDeltaBuffer = false;
     private bool Input_OnDown_Zoom {
         get {
             return Input.GetKeyDown(zoomKey);
@@ -74,6 +81,11 @@ public class FirstPersonController : MonoBehaviour
             return Input.GetAxis("Vertical");
             // return 0;
         }
+    }
+
+    private void UpdateInputs(){
+        cameraDeltaBuffer = cameraDeltaRef.action.ReadValue<Vector2>();
+
     }
 
     private Rigidbody rb;
@@ -264,6 +276,8 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        UpdateInputs();
+
         #region Camera
 
         // Control camera movement

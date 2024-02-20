@@ -18270,7 +18270,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 1.1e-44, w: 1.9348e-41}
+  m_BoundingSphereOverride: {x: 4.4065e-41, y: 0.0000003960595, z: 1.02e-43, w: 4e-45}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -23315,10 +23315,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2333540339022103859, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2333540339022103859, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: rHandTrigger
+      value: 
+      objectReference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    - target: {fileID: 2333540339022103859, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: rightHandTriggerRef
       value: 
       objectReference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     - target: {fileID: 5202860443354239826, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
