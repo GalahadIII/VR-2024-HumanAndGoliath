@@ -42,14 +42,14 @@ public class FirstPersonController : MonoBehaviour
     private bool zoomBuffer = false;
     private bool Input_OnDown_Zoom {
         get {
-            return Input.GetKeyDown(zoomKey);
-            // return false;
+            // return Input.GetKeyDown(zoomKey);
+            return false;
         }
     }
     private bool Input_OnUp_Zoom {
         get {
-            return Input.GetKeyUp(zoomKey);
-            // return false;
+            // return Input.GetKeyUp(zoomKey);
+            return false;
         }
     }
 
@@ -59,13 +59,14 @@ public class FirstPersonController : MonoBehaviour
     private bool jumpBuffer = false;
     private bool Input_OnDown_Jump {
         get {
-            return Input.GetKeyDown(jumpKey);
-            // return false;
+            // return Input.GetKeyDown(jumpKey);
+            return !jumpLastBuffer && jumpBuffer;
         }
     }
 
     [SerializeField]
     public InputActionReference crouchRef;
+    private bool crouchLastBuffer = false;
     private bool crouchBuffer = false;
     private bool Input_OnDown_Crouch {
         get {
@@ -82,16 +83,17 @@ public class FirstPersonController : MonoBehaviour
 
     [SerializeField]
     public InputActionReference moveXZRef;
-    private bool moveXZBuffer = false;
+    private Vector2 moveXZBuffer = Vector2.zero;
     private float Input_Horizontal {
         get {
-            return Input.GetAxis("Horizontal");
-            // return 0;
+            // return Input.GetAxis("Horizontal");
+            return moveXZBuffer.x;
         }
     }
     private float Input_Vertical {
         get {
-            return Input.GetAxis("Vertical");
+            // return Input.GetAxis("Vertical");
+            return moveXZBuffer.y;
             // return 0;
         }
     }
@@ -100,10 +102,12 @@ public class FirstPersonController : MonoBehaviour
         cameraDeltaBuffer = cameraDeltaRef.action.ReadValue<Vector2>();
 
         zoomLastBuffer = zoomBuffer;
-        // zoomBuffer = zoomRef.action.ReadValue<float>() > 0.1f;
+        zoomBuffer = zoomRef.action.ReadValue<float>() > 0.1f;
 
         jumpLastBuffer = jumpBuffer;
         jumpBuffer = jumpRef.action.ReadValue<float>() > 0.1f;
+
+        moveXZBuffer = moveXZRef.action.ReadValue<Vector2>();
 
     }
 
