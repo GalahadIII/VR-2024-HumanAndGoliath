@@ -799,6 +799,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Platforme Avec Gravite (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1947092907819984053, guid: d0699728731acd67ebbdc1a99f6377a0, type: 3}
+      propertyPath: m_Drag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947092907819984053, guid: d0699728731acd67ebbdc1a99f6377a0, type: 3}
+      propertyPath: m_AngularDrag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4545170917301674947, guid: d0699728731acd67ebbdc1a99f6377a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.68
