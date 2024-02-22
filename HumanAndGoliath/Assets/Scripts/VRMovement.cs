@@ -19,15 +19,15 @@ public class VRMovement : MonoBehaviour
     void Update()
     {
         float rHandTriggerIn = rightHandTriggerRef.action.ReadValue<float>();
-        Debug.Log(rHandTriggerIn);
+        // Debug.Log(rHandTriggerIn);
 
-        if (rHandTriggerIn > 0.5)
-        {
-            Debug.Log("Right hand trigger PRESSED");
-        }
-        else
-        {
-            Debug.Log("Right hand trigger UNPRESSED");
-        }
+        // if (rHandTriggerIn > 0.5)
+        // {
+        //     Debug.Log("Right hand trigger PRESSED");
+        // }
+        // else
+        // {
+        //     Debug.Log("Right hand trigger UNPRESSED");
+        // }
     }
 }

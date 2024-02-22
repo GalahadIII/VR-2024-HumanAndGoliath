@@ -20,7 +20,8 @@ using UnityEditor;
 public class FirstPersonController : MonoBehaviour
 {
 
-    private InputActionReference cameraDeltaRef;
+    [SerializeField]
+    public InputActionReference cameraDeltaRef;
     private Vector2 cameraDeltaBuffer = Vector2.zero;
     private float Input_MouseX {
         get {
@@ -35,7 +36,8 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private InputActionReference zoomRef;
+    [SerializeField]
+    public InputActionReference zoomRef;
     private bool zoomLastBuffer = false;
     private bool zoomBuffer = false;
     private bool Input_OnDown_Zoom {
@@ -51,7 +53,8 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private InputActionReference jumpRef;
+    [SerializeField]
+    public InputActionReference jumpRef;
     private bool jumpLastBuffer = false;
     private bool jumpBuffer = false;
     private bool Input_OnDown_Jump {
@@ -61,7 +64,8 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private InputActionReference crouchRef;
+    [SerializeField]
+    public InputActionReference crouchRef;
     private bool crouchBuffer = false;
     private bool Input_OnDown_Crouch {
         get {
@@ -76,7 +80,8 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private InputActionReference moveXZRef;
+    [SerializeField]
+    public InputActionReference moveXZRef;
     private bool moveXZBuffer = false;
     private float Input_Horizontal {
         get {
@@ -95,10 +100,10 @@ public class FirstPersonController : MonoBehaviour
         cameraDeltaBuffer = cameraDeltaRef.action.ReadValue<Vector2>();
 
         zoomLastBuffer = zoomBuffer;
-        zoomBuffer = zoomRef.action.ReadValue<float>() > 0f;
+        // zoomBuffer = zoomRef.action.ReadValue<float>() > 0.1f;
 
         jumpLastBuffer = jumpBuffer;
-        jumpBuffer = jumpRef.action.ReadValue<float>() > 0f;
+        jumpBuffer = jumpRef.action.ReadValue<float>() > 0.1f;
 
     }
 
@@ -226,7 +231,7 @@ public class FirstPersonController : MonoBehaviour
         // Set internal variables
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
-        jointOriginalPos = joint.localPosition;
+        // jointOriginalPos = joint.localPosition;
 
         if (!unlimitedSprint)
         {
@@ -242,44 +247,44 @@ public class FirstPersonController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        if(crosshair)
-        {
-            crosshairObject.sprite = crosshairImage;
-            crosshairObject.color = crosshairColor;
-        }
-        else
-        {
-            crosshairObject.gameObject.SetActive(false);
-        }
+        // if(crosshair)
+        // {
+        //     crosshairObject.sprite = crosshairImage;
+        //     crosshairObject.color = crosshairColor;
+        // }
+        // else
+        // {
+        //     crosshairObject.gameObject.SetActive(false);
+        // }
 
         #region Sprint Bar
 
-        sprintBarCG = GetComponentInChildren<CanvasGroup>();
+        // sprintBarCG = GetComponentInChildren<CanvasGroup>();
 
-        if(useSprintBar)
-        {
-            sprintBarBG.gameObject.SetActive(true);
-            sprintBar.gameObject.SetActive(true);
+        // if(useSprintBar)
+        // {
+        //     sprintBarBG.gameObject.SetActive(true);
+        //     sprintBar.gameObject.SetActive(true);
 
-            float screenWidth = Screen.width;
-            float screenHeight = Screen.height;
+        //     float screenWidth = Screen.width;
+        //     float screenHeight = Screen.height;
 
-            sprintBarWidth = screenWidth * sprintBarWidthPercent;
-            sprintBarHeight = screenHeight * sprintBarHeightPercent;
+        //     sprintBarWidth = screenWidth * sprintBarWidthPercent;
+        //     sprintBarHeight = screenHeight * sprintBarHeightPercent;
 
-            sprintBarBG.rectTransform.sizeDelta = new Vector3(sprintBarWidth, sprintBarHeight, 0f);
-            sprintBar.rectTransform.sizeDelta = new Vector3(sprintBarWidth - 2, sprintBarHeight - 2, 0f);
+        //     sprintBarBG.rectTransform.sizeDelta = new Vector3(sprintBarWidth, sprintBarHeight, 0f);
+        //     sprintBar.rectTransform.sizeDelta = new Vector3(sprintBarWidth - 2, sprintBarHeight - 2, 0f);
 
-            if(hideBarWhenFull)
-            {
-                sprintBarCG.alpha = 0;
-            }
-        }
-        else
-        {
-            sprintBarBG.gameObject.SetActive(false);
-            sprintBar.gameObject.SetActive(false);
-        }
+        //     if(hideBarWhenFull)
+        //     {
+        //         sprintBarCG.alpha = 0;
+        //     }
+        // }
+        // else
+        // {
+        //     sprintBarBG.gameObject.SetActive(false);
+        //     sprintBar.gameObject.SetActive(false);
+        // }
 
         #endregion
     }
@@ -499,7 +504,7 @@ public class FirstPersonController : MonoBehaviour
 
                     if (hideBarWhenFull && !unlimitedSprint)
                     {
-                        sprintBarCG.alpha += 5 * Time.deltaTime;
+                        // sprintBarCG.alpha += 5 * Time.deltaTime;
                     }
                 }
 
@@ -512,7 +517,7 @@ public class FirstPersonController : MonoBehaviour
 
                 if (hideBarWhenFull && sprintRemaining == sprintDuration)
                 {
-                    sprintBarCG.alpha -= 3 * Time.deltaTime;
+                    // sprintBarCG.alpha -= 3 * Time.deltaTime;
                 }
 
                 targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
@@ -637,6 +642,12 @@ public class FirstPersonController : MonoBehaviour
     public override void OnInspectorGUI()
     {
         SerFPC.Update();
+
+        fpc.cameraDeltaRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("cameraDeltaRef", "cameraDeltaRef"), fpc.cameraDeltaRef, typeof(InputActionReference), true);
+        fpc.zoomRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("zoomRef", "zoomRef"), fpc.zoomRef, typeof(InputActionReference), true);
+        fpc.jumpRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("jumpRef", "jumpRef"), fpc.jumpRef, typeof(InputActionReference), true);
+        fpc.crouchRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("crouchRef", "crouchRef"), fpc.crouchRef, typeof(InputActionReference), true);
+        fpc.moveXZRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("moveXZRef", "moveXZRef"), fpc.moveXZRef, typeof(InputActionReference), true);
 
         EditorGUILayout.Space();
         GUILayout.Label("Modular First Person Controller", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 16 });
