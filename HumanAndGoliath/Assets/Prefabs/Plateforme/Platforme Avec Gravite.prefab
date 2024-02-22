@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.284
+      value: -1.68
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -18,7 +18,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.643
+      value: 0.492
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalRotation.w
@@ -48,9 +48,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7899023892962596348, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8732633127842508162, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_Name
-      value: Platforme Sans Gravite (6) Variant
+      value: Platforme Avec Gravite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
