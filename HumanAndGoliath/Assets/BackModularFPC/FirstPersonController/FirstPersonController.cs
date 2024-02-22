@@ -8,48 +8,66 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.InputSystem;
+
 
 #if UNITY_EDITOR
-    using UnityEditor;
+using UnityEditor;
     using System.Net;
 #endif
+
 
 public class FirstPersonController : MonoBehaviour
 {
 
+    [SerializeField]
+    public InputActionReference cameraDeltaRef;
+    private Vector2 cameraDeltaBuffer = Vector2.zero;
     private float Input_MouseX {
         get {
-            return Input.GetAxis("Mouse X");
-            // return 0;
+            // return Input.GetAxis("Mouse X");
+            return cameraDeltaBuffer.x;
         }
     }
-
     private float Input_MouseY {
         get {
-            return Input.GetAxis("Mouse Y");
+            // return Input.GetAxis("Mouse Y");
+            return cameraDeltaBuffer.y;
         }
     }
 
+    [SerializeField]
+    public InputActionReference zoomRef;
+    private bool zoomLastBuffer = false;
+    private bool zoomBuffer = false;
     private bool Input_OnDown_Zoom {
         get {
-            return Input.GetKeyDown(zoomKey);
-            // return false;
+            // return Input.GetKeyDown(zoomKey);
+            return false;
         }
     }
     private bool Input_OnUp_Zoom {
         get {
-            return Input.GetKeyUp(zoomKey);
-            // return false;
+            // return Input.GetKeyUp(zoomKey);
+            return false;
         }
     }
 
+    [SerializeField]
+    public InputActionReference jumpRef;
+    private bool jumpLastBuffer = false;
+    private bool jumpBuffer = false;
     private bool Input_OnDown_Jump {
         get {
-            return Input.GetKeyDown(jumpKey);
-            // return false;
+            // return Input.GetKeyDown(jumpKey);
+            return !jumpLastBuffer && jumpBuffer;
         }
     }
 
+    [SerializeField]
+    public InputActionReference crouchRef;
+    private bool crouchLastBuffer = false;
+    private bool crouchBuffer = false;
     private bool Input_OnDown_Crouch {
         get {
             return Input.GetKeyDown(crouchKey);
@@ -63,17 +81,34 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    [SerializeField]
+    public InputActionReference moveXZRef;
+    private Vector2 moveXZBuffer = Vector2.zero;
     private float Input_Horizontal {
         get {
-            return Input.GetAxis("Horizontal");
-            // return 0;
+            // return Input.GetAxis("Horizontal");
+            return moveXZBuffer.x;
         }
     }
     private float Input_Vertical {
         get {
-            return Input.GetAxis("Vertical");
+            // return Input.GetAxis("Vertical");
+            return moveXZBuffer.y;
             // return 0;
         }
+    }
+
+    private void UpdateInputs() {
+        cameraDeltaBuffer = cameraDeltaRef.action.ReadValue<Vector2>();
+
+        zoomLastBuffer = zoomBuffer;
+        zoomBuffer = zoomRef.action.ReadValue<float>() > 0.1f;
+
+        jumpLastBuffer = jumpBuffer;
+        jumpBuffer = jumpRef.action.ReadValue<float>() > 0.1f;
+
+        moveXZBuffer = moveXZRef.action.ReadValue<Vector2>();
+
     }
 
     private Rigidbody rb;
@@ -200,7 +235,7 @@ public class FirstPersonController : MonoBehaviour
         // Set internal variables
         playerCamera.fieldOfView = fov;
         originalScale = transform.localScale;
-        jointOriginalPos = joint.localPosition;
+        // jointOriginalPos = joint.localPosition;
 
         if (!unlimitedSprint)
         {
@@ -216,44 +251,44 @@ public class FirstPersonController : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        if(crosshair)
-        {
-            crosshairObject.sprite = crosshairImage;
-            crosshairObject.color = crosshairColor;
-        }
-        else
-        {
-            crosshairObject.gameObject.SetActive(false);
-        }
+        // if(crosshair)
+        // {
+        //     crosshairObject.sprite = crosshairImage;
+        //     crosshairObject.color = crosshairColor;
+        // }
+        // else
+        // {
+        //     crosshairObject.gameObject.SetActive(false);
+        // }
 
         #region Sprint Bar
 
-        sprintBarCG = GetComponentInChildren<CanvasGroup>();
+        // sprintBarCG = GetComponentInChildren<CanvasGroup>();
 
-        if(useSprintBar)
-        {
-            sprintBarBG.gameObject.SetActive(true);
-            sprintBar.gameObject.SetActive(true);
+        // if(useSprintBar)
+        // {
+        //     sprintBarBG.gameObject.SetActive(true);
+        //     sprintBar.gameObject.SetActive(true);
 
-            float screenWidth = Screen.width;
-            float screenHeight = Screen.height;
+        //     float screenWidth = Screen.width;
+        //     float screenHeight = Screen.height;
 
-            sprintBarWidth = screenWidth * sprintBarWidthPercent;
-            sprintBarHeight = screenHeight * sprintBarHeightPercent;
+        //     sprintBarWidth = screenWidth * sprintBarWidthPercent;
+        //     sprintBarHeight = screenHeight * sprintBarHeightPercent;
 
-            sprintBarBG.rectTransform.sizeDelta = new Vector3(sprintBarWidth, sprintBarHeight, 0f);
-            sprintBar.rectTransform.sizeDelta = new Vector3(sprintBarWidth - 2, sprintBarHeight - 2, 0f);
+        //     sprintBarBG.rectTransform.sizeDelta = new Vector3(sprintBarWidth, sprintBarHeight, 0f);
+        //     sprintBar.rectTransform.sizeDelta = new Vector3(sprintBarWidth - 2, sprintBarHeight - 2, 0f);
 
-            if(hideBarWhenFull)
-            {
-                sprintBarCG.alpha = 0;
-            }
-        }
-        else
-        {
-            sprintBarBG.gameObject.SetActive(false);
-            sprintBar.gameObject.SetActive(false);
-        }
+        //     if(hideBarWhenFull)
+        //     {
+        //         sprintBarCG.alpha = 0;
+        //     }
+        // }
+        // else
+        // {
+        //     sprintBarBG.gameObject.SetActive(false);
+        //     sprintBar.gameObject.SetActive(false);
+        // }
 
         #endregion
     }
@@ -264,6 +299,8 @@ public class FirstPersonController : MonoBehaviour
 
     private void Update()
     {
+        UpdateInputs();
+
         #region Camera
 
         // Control camera movement
@@ -471,7 +508,7 @@ public class FirstPersonController : MonoBehaviour
 
                     if (hideBarWhenFull && !unlimitedSprint)
                     {
-                        sprintBarCG.alpha += 5 * Time.deltaTime;
+                        // sprintBarCG.alpha += 5 * Time.deltaTime;
                     }
                 }
 
@@ -484,7 +521,7 @@ public class FirstPersonController : MonoBehaviour
 
                 if (hideBarWhenFull && sprintRemaining == sprintDuration)
                 {
-                    sprintBarCG.alpha -= 3 * Time.deltaTime;
+                    // sprintBarCG.alpha -= 3 * Time.deltaTime;
                 }
 
                 targetVelocity = transform.TransformDirection(targetVelocity) * walkSpeed;
@@ -609,6 +646,12 @@ public class FirstPersonController : MonoBehaviour
     public override void OnInspectorGUI()
     {
         SerFPC.Update();
+
+        fpc.cameraDeltaRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("cameraDeltaRef", "cameraDeltaRef"), fpc.cameraDeltaRef, typeof(InputActionReference), true);
+        fpc.zoomRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("zoomRef", "zoomRef"), fpc.zoomRef, typeof(InputActionReference), true);
+        fpc.jumpRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("jumpRef", "jumpRef"), fpc.jumpRef, typeof(InputActionReference), true);
+        fpc.crouchRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("crouchRef", "crouchRef"), fpc.crouchRef, typeof(InputActionReference), true);
+        fpc.moveXZRef = (InputActionReference)EditorGUILayout.ObjectField(new GUIContent("moveXZRef", "moveXZRef"), fpc.moveXZRef, typeof(InputActionReference), true);
 
         EditorGUILayout.Space();
         GUILayout.Label("Modular First Person Controller", new GUIStyle(GUI.skin.label) { alignment = TextAnchor.MiddleCenter, fontStyle = FontStyle.Bold, fontSize = 16 });

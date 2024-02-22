@@ -9,7 +9,8 @@ public class VRMovement : MonoBehaviour
 {
     Vector2 rHandLastPos = Vector2.zero;
 
-    [SerializeField] private InputActionReference rHandTrigger;
+    // [SerializeField] private InputActionReference rightHandPositionRef;
+    [SerializeField] private InputActionReference rightHandTriggerRef;
     void Start()
     {
 
@@ -17,15 +18,16 @@ public class VRMovement : MonoBehaviour
 
     void Update()
     {
-        float rHandTriggerOn = rHandTrigger.action.ReadValue<float>();
+        float rHandTriggerIn = rightHandTriggerRef.action.ReadValue<float>();
+        // Debug.Log(rHandTriggerIn);
 
-        if (rHandTriggerOn > 0.5)
-        {
-            Debug.Log("Right hand trigger PRESSED");
-        }
-        else
-        {
-            Debug.Log("Right hand trigger UNPRESSED");
-        }
+        // if (rHandTriggerIn > 0.5)
+        // {
+        //     Debug.Log("Right hand trigger PRESSED");
+        // }
+        // else
+        // {
+        //     Debug.Log("Right hand trigger UNPRESSED");
+        // }
     }
 }

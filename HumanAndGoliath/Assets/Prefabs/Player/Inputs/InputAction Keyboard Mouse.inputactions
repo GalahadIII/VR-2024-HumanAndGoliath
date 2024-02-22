@@ -1,5 +1,5 @@
 {
-    "name": "PlayerInputAction",
+    "name": "InputAction Keyboard Mouse",
     "maps": [
         {
             "name": "Keyboard",
@@ -18,6 +18,24 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "8d15ac0f-bf3f-4fb9-b973-90704f29a4d5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Crouch",
+                    "type": "Button",
+                    "id": "ddc0a3c9-bf2b-4c59-80cc-77a1688df579",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Zoom",
+                    "type": "Button",
+                    "id": "12e5df42-e2a9-48dc-afaa-ba4a6d44880b",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -128,6 +146,28 @@
                     "processors": "",
                     "groups": "Keyboard+Mouse",
                     "action": "CameraLock",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61a0c434-552e-4c18-ac30-9fdf84a8dec1",
+                    "path": "<Keyboard>/shift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard+Mouse",
+                    "action": "Crouch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2cbc25a6-0015-4c65-ab33-700f36c8c1e9",
+                    "path": "<Keyboard>/c",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard+Mouse",
+                    "action": "Zoom",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
