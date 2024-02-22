@@ -35,8 +35,9 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    // private InputActionReference cameraDeltaRef;
-    // private bool cameraDeltaBuffer = false;
+    private InputActionReference zoomRef;
+    private bool zoomLastBuffer = false;
+    private bool zoomBuffer = false;
     private bool Input_OnDown_Zoom {
         get {
             return Input.GetKeyDown(zoomKey);
@@ -50,6 +51,9 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private InputActionReference jumpRef;
+    private bool jumpLastBuffer = false;
+    private bool jumpBuffer = false;
     private bool Input_OnDown_Jump {
         get {
             return Input.GetKeyDown(jumpKey);
@@ -57,6 +61,8 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private InputActionReference crouchRef;
+    private bool crouchBuffer = false;
     private bool Input_OnDown_Crouch {
         get {
             return Input.GetKeyDown(crouchKey);
@@ -70,6 +76,8 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private InputActionReference moveXZRef;
+    private bool moveXZBuffer = false;
     private float Input_Horizontal {
         get {
             return Input.GetAxis("Horizontal");
@@ -83,8 +91,14 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
-    private void UpdateInputs(){
+    private void UpdateInputs() {
         cameraDeltaBuffer = cameraDeltaRef.action.ReadValue<Vector2>();
+
+        zoomLastBuffer = zoomBuffer;
+        zoomBuffer = zoomRef.action.ReadValue<float>() > 0f;
+
+        jumpLastBuffer = jumpBuffer;
+        jumpBuffer = jumpRef.action.ReadValue<float>() > 0f;
 
     }
 
