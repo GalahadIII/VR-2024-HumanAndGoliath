@@ -538,6 +538,10 @@ PrefabInstance:
       propertyPath: m_Height
       value: 170
       objectReference: {fileID: 0}
+    - target: {fileID: 8189171602916567492, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8189171603400248654, guid: 65eb6b98091a5734ba9d9ca871cef69a, type: 3}
       propertyPath: m_ActionAssets.Array.size
       value: 2
