@@ -23610,9 +23610,25 @@ PrefabInstance:
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5505123545273906617, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_EnableFreeYMovement
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5940492567901448057, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_UseGravity
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493847295916550415, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_EnableFreeYMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7015163971981923486, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7564204560161292366, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_EnableFreeYMovement
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7783282531530112517, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_SizeDelta.x
