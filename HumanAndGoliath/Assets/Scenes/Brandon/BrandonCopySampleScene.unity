@@ -23538,6 +23538,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1173795817061625482, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1453432776273377996, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.304
@@ -23634,13 +23638,29 @@ PrefabInstance:
       propertyPath: m_GrabMoveAction.m_Reference
       value: 
       objectReference: {fileID: -5982496924579745919, guid: 0c0c8453a7c3168a99c225ca148d306c, type: 3}
+    - target: {fileID: 5578959012758839169, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5940492567901448057, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_UseGravity
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6493847295916550415, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493847295916550415, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_EnableRotation
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493847295916550415, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_EnableFreeYMovement
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6493847295916550415, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_RequireTwoHandsForTranslation
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7015163971981923486, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_IsActive
