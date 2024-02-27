@@ -421,7 +421,7 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
-        Debug.Log($"{enableJump}, {Input_OnDown_Jump}, {isGrounded}");
+        // Debug.Log($"{enableJump}, {Input_OnDown_Jump}, {isGrounded}");
         if(enableJump && Input_OnDown_Jump && isGrounded)
         {
             Jump();
