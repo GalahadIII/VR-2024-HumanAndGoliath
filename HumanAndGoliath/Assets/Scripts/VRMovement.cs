@@ -10,7 +10,12 @@ public class VRMovement : MonoBehaviour
     Vector2 rHandLastPos = Vector2.zero;
 
     // [SerializeField] private InputActionReference rightHandPositionRef;
-    [SerializeField] private InputActionReference rightHandTriggerRef;
+    [SerializeField] private InputActionReference RH_Trigger_InputRef;
+    [SerializeField] private InputActionReference RH_Position_InputRef;
+    private Vector3 rh_lastPosition;
+
+    [SerializeField] private Transform completeXRSetup;
+
     void Start()
     {
 
@@ -18,16 +23,16 @@ public class VRMovement : MonoBehaviour
 
     void Update()
     {
-        float rHandTriggerIn = rightHandTriggerRef.action.ReadValue<float>();
-        // Debug.Log(rHandTriggerIn);
+        float RH_inputTrigger = RH_Trigger_InputRef.action.ReadValue<float>();
+        bool triggered = RH_inputTrigger != 0;
+        if (!triggered)
+        {
+            return;
+        }
 
-        // if (rHandTriggerIn > 0.5)
-        // {
-        //     Debug.Log("Right hand trigger PRESSED");
-        // }
-        // else
-        // {
-        //     Debug.Log("Right hand trigger UNPRESSED");
-        // }
+        Vector3 RH_inputPosition = RH_Position_InputRef.action.ReadValue<Vector3>();
+        Vector3 diff = rh_lastPosition - RH_inputPosition;
+        completeXRSetup.localPosition += diff;
+        rh_lastPosition = RH_inputPosition;
     }
 }
