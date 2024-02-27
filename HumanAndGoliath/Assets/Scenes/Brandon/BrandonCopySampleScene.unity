@@ -23589,7 +23589,7 @@ PrefabInstance:
     - target: {fileID: 2333540339022103859, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: RH_Trigger_InputRef
       value: 
-      objectReference: {fileID: 187161793506945269, guid: 0c0c8453a7c3168a99c225ca148d306c, type: 3}
+      objectReference: {fileID: 83097790271614945, guid: 0c0c8453a7c3168a99c225ca148d306c, type: 3}
     - target: {fileID: 2333540339022103859, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: rightHandTriggerRef
       value: 
