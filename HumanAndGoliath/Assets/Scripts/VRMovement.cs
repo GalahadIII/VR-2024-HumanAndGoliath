@@ -24,14 +24,15 @@ public class VRMovement : MonoBehaviour
     void Update()
     {
         float RH_inputTrigger = RH_Trigger_InputRef.action.ReadValue<float>();
-        bool triggered = RH_inputTrigger != 0;
-        if (!triggered)
+        Debug.Log(RH_inputTrigger);
+        if (RH_inputTrigger == 0)
         {
             return;
         }
 
         Vector3 RH_inputPosition = RH_Position_InputRef.action.ReadValue<Vector3>();
         Vector3 diff = rh_lastPosition - RH_inputPosition;
+        Debug.Log($"{RH_inputPosition} {rh_lastPosition} {diff}");
         completeXRSetup.localPosition += diff;
         rh_lastPosition = RH_inputPosition;
     }
