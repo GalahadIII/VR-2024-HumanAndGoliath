@@ -23608,7 +23608,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5505123545273906617, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5505123545273906617, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_UseGravity
@@ -23618,6 +23618,14 @@ PrefabInstance:
       propertyPath: m_EnableFreeYMovement
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5505123545273906617, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_EnableMoveWhileSelecting
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5505123545273906617, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
+      propertyPath: m_GrabMoveAction.m_Reference
+      value: 
+      objectReference: {fileID: -5982496924579745919, guid: 0c0c8453a7c3168a99c225ca148d306c, type: 3}
     - target: {fileID: 5940492567901448057, guid: 8971da12195f8d0d6aef0ce32beeeec4, type: 3}
       propertyPath: m_UseGravity
       value: 0
