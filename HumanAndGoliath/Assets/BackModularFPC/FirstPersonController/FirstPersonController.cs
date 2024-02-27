@@ -57,12 +57,7 @@ public class FirstPersonController : MonoBehaviour
     public InputActionReference jumpRef;
     private bool jumpLastBuffer = false;
     private bool jumpBuffer = false;
-    private bool Input_OnDown_Jump {
-        get {
-            // return Input.GetKeyDown(jumpKey);
-            return !jumpLastBuffer && jumpBuffer;
-        }
-    }
+    private bool Input_OnDown_Jump { get; set; }
 
     [SerializeField]
     public InputActionReference crouchRef;
@@ -103,6 +98,7 @@ public class FirstPersonController : MonoBehaviour
 
         zoomLastBuffer = zoomBuffer;
         zoomBuffer = zoomRef.action.ReadValue<float>() > 0.1f;
+        Input_OnDown_Jump = !jumpLastBuffer && jumpBuffer;
 
         jumpLastBuffer = jumpBuffer;
         jumpBuffer = jumpRef.action.ReadValue<float>() > 0.1f;
@@ -425,6 +421,7 @@ public class FirstPersonController : MonoBehaviour
         #region Jump
 
         // Gets input and calls jump method
+        // Debug.Log($"{enableJump}, {Input_OnDown_Jump}, {isGrounded}");
         if(enableJump && Input_OnDown_Jump && isGrounded)
         {
             Jump();
@@ -543,13 +540,16 @@ public class FirstPersonController : MonoBehaviour
     // Sets isGrounded based on a raycast sent straigth down from the player object
     private void CheckGround()
     {
-        Vector3 origin = new Vector3(transform.position.x, transform.position.y - (transform.localScale.y * .5f), transform.position.z);
+        Vector3 origin = new Vector3(transform.position.x, transform.position.y + (transform.localScale.y * .5f), transform.position.z);
+        // Vector3 origin = transform.position;
         Vector3 direction = transform.TransformDirection(Vector3.down);
-        float distance = .75f;
+        float distance = 0.75f;
 
+        // Debug.Log("checkground");
+        // Debug.DrawLine(origin, origin + direction * distance, Color.white);
+        Debug.DrawRay(origin, direction * distance, Color.white);
         if (Physics.Raycast(origin, direction, out RaycastHit hit, distance))
         {
-            Debug.DrawRay(origin, direction * distance, Color.red);
             isGrounded = true;
         }
         else
