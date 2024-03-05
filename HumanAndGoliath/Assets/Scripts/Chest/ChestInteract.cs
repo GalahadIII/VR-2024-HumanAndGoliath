@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ChestInteract : MonoBehaviour, IInteractable
 {
+    [SerializeField]
+    private GameObject openedChest;
+
+    [SerializeField]
+    private GameObject closedChest;
 
     private bool isOpen = false;
 
@@ -19,7 +24,9 @@ public class ChestInteract : MonoBehaviour, IInteractable
 
         if (isPlayerLooking)
         {
-            Debug.Log("Player looking at object");
+            isOpen = !isOpen;
+            openedChest.SetActive(isOpen);
+            closedChest.SetActive(!isOpen);
         }
     }
 }
