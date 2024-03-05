@@ -20,6 +20,7 @@ public class ChestInteract : MonoBehaviour, IInteractable
 
     public void Interact(Transform cameraTransform)
     {
+        Debug.Log("chest interact");
         bool isPlayerLooking = Physics.Raycast(cameraTransform.position, cameraTransform.forward - this.transform.position, 10);
 
         if (isPlayerLooking)
