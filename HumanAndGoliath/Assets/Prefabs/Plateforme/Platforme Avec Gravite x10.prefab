@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3.9999998
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5298553208466231946, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7899023892962596348, guid: a8767f2367ddbb4a5bb4e1e924e6705c, type: 3}
       propertyPath: m_Drag
