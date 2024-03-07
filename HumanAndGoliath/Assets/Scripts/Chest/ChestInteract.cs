@@ -19,7 +19,6 @@ public class ChestInteract : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        UpdateChestVisual();
     }
 
     public void Interact()
@@ -59,7 +58,7 @@ public class ChestInteract : MonoBehaviour, IInteractable
             return;
         }
 
-        Vector3 newPos = transform.position + Vector3.up * 2;
+        Vector3 newPos = transform.position + Vector3.up * 5f;
         spawnedItem = Instantiate(prefab, newPos, Quaternion.identity, transform);
     }
 
