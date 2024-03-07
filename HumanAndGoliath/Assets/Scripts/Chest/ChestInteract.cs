@@ -12,15 +12,8 @@ public class ChestInteract : MonoBehaviour, IInteractable
 
     private bool isOpen = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Debug.Log("Started chest script");
-    }
-
     public void Interact()
     {
-        Debug.Log("chest interact");
         isOpen = !isOpen;
         openedChest.SetActive(isOpen);
         closedChest.SetActive(!isOpen);
