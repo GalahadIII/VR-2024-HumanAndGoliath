@@ -18,16 +18,11 @@ public class ChestInteract : MonoBehaviour, IInteractable
         Debug.Log("Started chest script");
     }
 
-    public void Interact(Transform cameraTransform)
+    public void Interact()
     {
         Debug.Log("chest interact");
-        bool isPlayerLooking = Physics.Raycast(cameraTransform.position, cameraTransform.forward - this.transform.position, 10);
-
-        if (isPlayerLooking)
-        {
-            isOpen = !isOpen;
-            openedChest.SetActive(isOpen);
-            closedChest.SetActive(!isOpen);
-        }
+        isOpen = !isOpen;
+        openedChest.SetActive(isOpen);
+        closedChest.SetActive(!isOpen);
     }
 }
