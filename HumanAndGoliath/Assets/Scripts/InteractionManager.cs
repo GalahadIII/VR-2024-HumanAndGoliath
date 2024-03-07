@@ -26,6 +26,10 @@ public class InteractionManager : MonoBehaviour
         }
 
         bool raycastHit = Physics.Raycast(cameraTransform.position, cameraTransform.forward, out RaycastHit hitinfo, maxDistance);
+        if (!raycastHit)
+        {
+            return;
+        }
         GameObject interactableCandidate = hitinfo.collider.gameObject;
         bool interactableValid = interactableCandidate.TryGetComponent<IInteractable>(out IInteractable interactable);
         if (!interactableValid)
