@@ -15,6 +15,7 @@ public class InteractionManager : MonoBehaviour
 
         if (!cameraTransform)
         {
+            Debug.LogError("Camera transform not serialized");
             return;
         }
 
