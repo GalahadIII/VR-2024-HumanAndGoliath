@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IInteractable
 {
-    public void Interact(Transform cameraTransform);
+    public void Interact();
 }
