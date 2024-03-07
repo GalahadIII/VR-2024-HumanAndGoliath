@@ -5816,10 +5816,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: InteractableChest
       objectReference: {fileID: 0}
-    - target: {fileID: 891067816858686594, guid: f909a0c2253dda34ca9ff7c37ce3d35a, type: 3}
-      propertyPath: prefab
-      value: 
-      objectReference: {fileID: 1129001904925138123, guid: 848145cc0fc8d000783c7afeed0aaa98, type: 3}
     - target: {fileID: 5632049625020241913, guid: f909a0c2253dda34ca9ff7c37ce3d35a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.51

@@ -49,6 +49,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openedChest: {fileID: 6257131087727629796}
   closedChest: {fileID: 4658427222016786024}
+  prefab: {fileID: 1129001904925138123, guid: 848145cc0fc8d000783c7afeed0aaa98, type: 3}
 --- !u!65 &5796161626504942690
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -263,3 +264,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   openedChest: {fileID: 0}
   closedChest: {fileID: 0}
+  prefab: {fileID: 0}
