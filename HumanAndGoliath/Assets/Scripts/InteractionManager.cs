@@ -39,16 +39,6 @@ public class InteractionManager : MonoBehaviour
 
         interactable.Interact();
 
-        // foreach (IInteractable interactable in interactablesInRange)
-        // {
-
-
-        //     if ()
-        //     if (raycastHit && Input.GetKeyDown(KeyCode.E))
-        //     {
-        //         interactable.Interact(this.rotationTransform);
-        //     }
-        // }
     }
 
 }
