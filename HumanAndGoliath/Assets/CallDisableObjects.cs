@@ -9,6 +9,7 @@ public class CallDisableObjects : MonoBehaviour
     private List<GameObject> toDisable = new List<GameObject>();
 
     public void Disable(){
+        Debug.Log("CallDisableObjects.Disable()");
         foreach (GameObject gameObject in toDisable)
         {
             gameObject.SetActive(false);
@@ -16,6 +17,7 @@ public class CallDisableObjects : MonoBehaviour
     }
 
     public void Enable(){
+        Debug.Log("CallDisableObjects.Enable()");
         foreach (GameObject gameObject in toDisable)
         {
             gameObject.SetActive(false);
@@ -23,6 +25,7 @@ public class CallDisableObjects : MonoBehaviour
     }
 
     public void Toggle(){
+        Debug.Log("CallDisableObjects.Toggle()");
         foreach (GameObject gameObject in toDisable)
         {
             gameObject.SetActive(!gameObject.activeSelf);
