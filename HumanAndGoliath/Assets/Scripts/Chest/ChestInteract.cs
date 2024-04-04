@@ -11,7 +11,7 @@ public class ChestInteract : MonoBehaviour, IInteractable
     private GameObject closedChest;
 
     [SerializeField]
-    private GameObject prefab;
+    private GameObject spawnPrefab;
 
     [SerializeField]
     private Vector3 spawnPosition = Vector3.up * 5f;
@@ -52,7 +52,7 @@ public class ChestInteract : MonoBehaviour, IInteractable
     {
         UpdateChestVisual();
 
-        if (!prefab)
+        if (!spawnPrefab)
         {
             Debug.LogError("prefab not serialized");
             return;
@@ -64,7 +64,7 @@ public class ChestInteract : MonoBehaviour, IInteractable
             return;
         }
 
-        spawnedItem = Instantiate(prefab, transform.position + spawnPosition, transform.rotation * spawnRotation, transform);
+        spawnedItem = Instantiate(spawnPrefab, transform.position + spawnPosition, transform.rotation * spawnRotation, transform);
     }
 
     public void CloseChest()
