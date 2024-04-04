@@ -24,7 +24,7 @@ public class CallDisableObjects : MonoBehaviour
         Debug.Log("CallDisableObjects.Enable()");
         foreach (GameObject gameObject in toDisable)
         {
-            gameObject.SetActive(false);
+            gameObject.SetActive(true);
         }
     }
 
