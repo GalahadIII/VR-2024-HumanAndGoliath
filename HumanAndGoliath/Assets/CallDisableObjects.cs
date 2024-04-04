@@ -6,7 +6,11 @@ public class CallDisableObjects : MonoBehaviour
 {
 
     [SerializeField]
-    private List<GameObject> toDisable = new List<GameObject>();
+    private List<GameObject> toDisable;
+
+    private void Awake() {
+        toDisable ??= new List<GameObject>();
+    }
 
     public void Disable(){
         Debug.Log("CallDisableObjects.Disable()");
