@@ -13,6 +13,12 @@ public class ChestInteract : MonoBehaviour, IInteractable
     [SerializeField]
     private GameObject prefab;
 
+    [SerializeField]
+    private Vector3 spawnPosition = Vector3.up * 5f;
+
+    [SerializeField]
+    private Quaternion spawnRotation = Quaternion.AngleAxis(90, Vector3.forward);
+
     private GameObject spawnedItem;
 
     private bool isOpen = false;
@@ -58,8 +64,7 @@ public class ChestInteract : MonoBehaviour, IInteractable
             return;
         }
 
-        Vector3 newPos = transform.position + Vector3.up * 5f;
-        spawnedItem = Instantiate(prefab, newPos, Quaternion.identity, transform);
+        spawnedItem = Instantiate(prefab, transform.position + spawnPosition, transform.rotation * spawnRotation, transform);
     }
 
     public void CloseChest()
